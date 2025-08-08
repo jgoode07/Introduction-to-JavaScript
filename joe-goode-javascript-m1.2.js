@@ -43,3 +43,14 @@ if (a > b && a > c) {
 
 // Output result using string concatenation
 console.log("The largest number is " + largest);
+
+
+// M1.2 Exercise 3: Odd numbers from 1 to 50
+
+// Loop through numbers starting from 1 to 50
+for (let i = 1; i <= 50; i++) {
+   // Check if the number is odd using the modulus operator and strict NOT equals
+    if (i % 2 !== 0) {
+        console.log(i);  // Output each odd number to the console
+    }
+}
