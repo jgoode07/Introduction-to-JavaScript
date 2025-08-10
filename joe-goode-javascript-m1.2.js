@@ -1,3 +1,5 @@
+'use strict';
+
 // --------------------------- M1.2 Exercise 1: Celsius to Fahrenheit ---------------------------
 
 // --- Celsius to Fahrenheit ---
