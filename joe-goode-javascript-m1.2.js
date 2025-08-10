@@ -1,4 +1,4 @@
-// Joe Goode - M1.2 Exercise 1: Celsius to Fahrenheit
+// --------------------------- M1.2 Exercise 1: Celsius to Fahrenheit ---------------------------
 
 // --- Celsius to Fahrenheit ---
 // Ask the user for a number and store it as Celsius
@@ -21,7 +21,7 @@ let celsiusFromF = (fahrenheit - 32) * 5/9;
 console.log(fahrenheit.toFixed(1) + " Fahrenheit is " + celsiusFromF.toFixed(1) + " Celsius");
 
 
-// M1.2 Exercise 2: Largest of three numbers
+// --------------------------- M1.2 Exercise 2: Largest of three numbers ---------------------------
 // Note: This doesn't check for duplicate numbers or handle cases where nothing is entered.
 
 // Ask the user for three numbers and store them as numbers
@@ -45,7 +45,7 @@ if (a > b && a > c) {
 console.log("The largest number is " + largest);
 
 
-// M1.2 Exercise 3: Odd numbers from 1 to 50
+// --------------------------- M1.2 Exercise 3: Odd numbers from 1 to 50 ---------------------------
 
 // Loop through numbers starting from 1 to 50
 for (let i = 1; i <= 50; i++) {
@@ -54,3 +54,30 @@ for (let i = 1; i <= 50; i++) {
         console.log(i);  // Output each odd number to the console
     }
 }
+
+
+// --------------------------- M1.2 Exercise 4: Millionaire savings account ---------------------------
+
+// Initialize variables 
+let balance = 500; // starting balance - hard coded
+let yearsTo100k = 0;
+let yearsToMillion = 0;
+let year = 0;
+
+// Loop until balance reaches 1 million
+while (balance < 1000000) {
+    balance *= 2; // double the balance each year
+    year++; // Increment year after each iteration
+
+    // Records the year it first reaches 100k
+    if (balance >= 100000 && yearsTo100k === 0) {
+        yearsTo100k = year;
+    }
+}
+
+// After loop ends, total years is yearsToMillion
+yearsToMillion = year;
+
+// Output the results
+console.log("Years to reach $100,000: " + yearsTo100k);
+console.log("Years to reach $1,000,000: " + yearsToMillion);
